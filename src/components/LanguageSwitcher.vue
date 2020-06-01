@@ -1,10 +1,10 @@
 <template>
   <div class="languageSwitcher">
-    <div>
-      <button v-for="lang in languages" :key="lang" value="lang" @click="changeLang(lang)">
+    <select @change="changeLang($event)">
+      <option v-for="lang in languages" :key="lang">
       {{ lang }}
-      </button>
-    </div>
+      </option>
+    </select>
   </div>
 </template>
 
@@ -13,8 +13,8 @@ export default {
   name: 'LanguageSwitcher',
   data: () => ({ languages: ['en', 'de', 'it'] }),
   methods: {
-    changeLang(lang) {
-      this.$i18n.locale = lang
+    changeLang(event) {
+      this.$i18n.locale = event.target.value
     }
   }
 }
