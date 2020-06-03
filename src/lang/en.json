@@ -1,0 +1,9 @@
+{
+  "home": {
+    "header": "Home"
+  },
+  "about": {
+    "header": "This is an about page"
+  },
+  "error": "Page not found"
+}

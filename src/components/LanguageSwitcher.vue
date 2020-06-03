@@ -1,7 +1,12 @@
 <template>
   <div class="languageSwitcher">
     <select @change="changeLang($event)">
-      <option v-for="lang in languages" :key="lang">
+      <option 
+        v-for="lang in supportedLanguages" 
+        :key="lang" 
+        :selected="isCurrentLanguage(lang)" 
+        :class="{ 'is-selected': isCurrentLanguage(lang) }"
+         :value="lang">
       {{ lang }}
       </option>
     </select>
@@ -9,12 +14,28 @@
 </template>
 
 <script>
+import { Trans } from '../plugins/Translation'
+
 export default {
   name: 'LanguageSwitcher',
-  data: () => ({ languages: ['en', 'de', 'it'] }),
+  computed: {
+    supportedLanguages () {
+      return Trans.supportedLanguages
+    },
+    currentLanguage () {
+      return Trans.currentLanguage
+    }
+  },
   methods: {
     changeLang(event) {
-      this.$i18n.locale = event.target.value
+      const lang = event.target.value
+      const to = this.$router.resolve({ params: { lang } })
+      return Trans.changeLang(lang).then(() => {
+        this.$router.push(to.location)
+      })
+    },
+    isCurrentLanguage (lang) {
+      return lang === this.currentLanguage
     }
   }
 }
