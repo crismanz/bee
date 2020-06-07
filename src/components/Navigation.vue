@@ -6,8 +6,33 @@
     <router-link :to="$i18nRoute({ name: 'about'})">
       About
     </router-link>
+    <router-link :to="$i18nRoute({ name: 'settings'})">
+      Settings
+    </router-link>
+    <router-link :to="$i18nRoute({ name: 'login'})">
+      Login
+    </router-link>
+    <router-link :to="$i18nRoute({ name: 'signUp'})">
+      Sign up
+    </router-link>
+    <button @click="logout">Logout</button>
   </div>
 </template>
+
+<script>
+import firebase, { auth } from 'firebase'
+
+export default {
+  name: 'navigation',
+  methods: {
+    logout: function() {
+      firebase.auth().signOut().then(() => {
+        alert('Successfully logged out')
+      })
+    }
+  }
+}
+</script>
 
 <style>
 .nav {

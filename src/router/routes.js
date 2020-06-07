@@ -1,7 +1,11 @@
 import { Trans } from '../plugins/Translation'
 
-function load (component) {
+function loadPage (component) {
   return () => import(`../pages/${component}.vue`)
+}
+
+function loadAccount (component) {
+  return () => import(`../components/account/${component}.vue`)
 }
 
 export default [
@@ -15,16 +19,36 @@ export default [
       {
         path: '',
         name: 'home',
-        component: load('Home')
+        component: loadPage('Home')
       },
       {
         path: 'about',
         name: 'about',
-        component: load('About')
+        component: loadPage('About')
       },
       {
+        path: 'settings',
+        name: 'settings',
+        component: loadPage('Settings'),
+        //TODO: only login users should be able to see this page
+        // meta: {
+        //   requiresAuth: true
+        // }
+      },
+      {
+        //TODO: redirect to 404 page or other page
         path: '*',
-        component: load('404')
+        component: loadPage('404')
+      },
+      {
+        path: 'login',
+        name: 'login',
+        component: loadAccount('Login')
+      },
+      {
+        path: 'sign-up',
+        name: 'signUp',
+        component: loadAccount('SignUp')
       }
     ]
   },

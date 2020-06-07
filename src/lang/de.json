@@ -5,5 +5,8 @@
   "about": {
     "header": "Uber uns"
   },
+  "settings": {
+    "header": "Einstellungen"
+  },
   "error": "Seite nicht gefunden"
 }

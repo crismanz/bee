@@ -5,5 +5,8 @@
   "about": {
     "header": "This is an about page"
   },
+  "settings": {
+    "header": "Settings"
+  },
   "error": "Page not found"
 }
