@@ -1,12 +1,26 @@
 {
   "home": {
+    "nav": "Casa",
     "header": "Casa"
   },
   "about": {
-    "header": "di noi.. "
+    "nav": "About",
+    "header": "di noi.."
   },
   "settings": {
+    "nav": "Impostazioni",
     "header": "Impostazioni"
   },
-  "error": "Pagina non trovata"
+  "error": "Pagina non trovata",
+  "account": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "createNew": "Let's create a new account!",
+    "new": "You don't have an account? You can ",
+    "create": "create one",
+    "back": "or go back to "
+  }
 }

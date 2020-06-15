@@ -1,12 +1,26 @@
 {
   "home": {
+    "nav": "Haus",
     "header": "Haus"
   },
   "about": {
+    "nav": "Uber uns",
     "header": "Uber uns"
   },
   "settings": {
+    "nav": "Einstellungen",
     "header": "Einstellungen"
   },
-  "error": "Seite nicht gefunden"
+  "error": "Seite nicht gefunden",
+  "account": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "createNew": "Let's create a new account!",
+    "new": "You don't have an account? You can ",
+    "create": "create one",
+    "back": "or go back to "
+  }
 }

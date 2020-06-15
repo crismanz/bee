@@ -1,10 +1,10 @@
 <template>
   <div class="sign-up">
-    <p>Let's create a new account !</p>
-    <input type="text" v-model="email" placeholder="Email"><br>
-    <input type="password" v-model="password" placeholder="Password"><br>
-    <button @click="signUp">Sign Up</button>
-    <span>or go back to <router-link :to="$i18nRoute({ name: 'login'})">login</router-link>.</span>
+    <p>{{ $t('account.createNew') }}</p>
+    <input type="text" v-model="email" :placeholder="$t('account.email')"><br>
+    <input type="password" v-model="password" :placeholder="$t('account.password')"><br>
+    <button @click="signUp">{{ $t('account.signup') }}</button>
+    <span>{{ $t('account.back') }}<router-link :to="$i18nRoute({ name: 'login'})">{{ $t('account.login') }}</router-link>.</span>
   </div>
 </template>
 

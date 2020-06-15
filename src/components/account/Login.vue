@@ -1,11 +1,11 @@
 <template>
   <div class="login">
-    <h3>Sign In</h3>
-    <input type="text" v-model="email" placeholder="Email"><br>
-    <input type="password" v-model="password" placeholder="Password"><br>
-    <button @click="login">Login</button>
-    <p>You don't have an account ? You can 
-      <router-link :to="$i18nRoute({ name: 'signUp'})">create one</router-link></p>
+    <h3>{{ $t('account.signup') }}</h3>
+    <input type="text" v-model="email" :placeholder="$t('account.email')"><br>
+    <input type="password" v-model="password" :placeholder="$t('account.password')"><br>
+    <button @click="login">{{ $t('account.login') }}</button>
+    <p>{{ $t('account.new') }}
+      <router-link :to="$i18nRoute({ name: 'signUp'})">{{ $t('account.create') }}</router-link></p>
   </div>
 </template>
 

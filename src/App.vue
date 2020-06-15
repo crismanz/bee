@@ -3,6 +3,9 @@
     <navigation />
     <switchLang class="lang"/>
     <router-view/>
+    <footer id="footer">
+      <p>&copy; Copyright {{date()}}</p>
+    </footer>
   </div>
 </template>
 
@@ -15,6 +18,11 @@ export default {
   components: {
     switchLang,
     Navigation
+  },
+  methods: {
+    date() {
+      return new Date().getFullYear();
+    }
   }
 }
 </script>
@@ -26,5 +34,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #dee2e6;
+  width: 95%;
+  text-align: center;
 }
 </style>

@@ -1,21 +1,21 @@
 <template>
   <div class="nav">
     <router-link :to="$i18nRoute({ name: 'home'})">
-      Home
+      {{ $t('home.nav') }}
     </router-link>
     <router-link :to="$i18nRoute({ name: 'about'})">
-      About
+      {{ $t('about.nav') }}
     </router-link>
     <router-link :to="$i18nRoute({ name: 'settings'})">
-      Settings
+      {{ $t('settings.nav') }}
     </router-link>
     <router-link :to="$i18nRoute({ name: 'login'})">
-      Login
+      {{ $t('account.login') }}
     </router-link>
     <router-link :to="$i18nRoute({ name: 'signUp'})">
-      Sign up
+      {{ $t('account.signup') }}
     </router-link>
-    <button @click="logout">Logout</button>
+    <button @click="logout">{{ $t('account.logout') }}</button>
   </div>
 </template>
 

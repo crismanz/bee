@@ -1,12 +1,26 @@
 {
   "home": {
+    "nav": "Home",
     "header": "Home"
   },
   "about": {
+    "nav": "About",
     "header": "This is an about page"
   },
   "settings": {
+    "nav": "Settings",
     "header": "Settings"
   },
-  "error": "Page not found"
+  "error": "Page not found",
+  "account": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "createNew": "Let's create a new account!",
+    "new": "You don't have an account? You can ",
+    "create": "create one",
+    "back": "or go back to "
+  }
 }
